@@ -1,8 +1,9 @@
 <script>
-  import styles from './Button.module.css';
-  import reset from '$lib/styles/reset/reset.module.css';
-	
-  /**
+	import styles from './Button.module.css';
+	import reset from '$lib/styles/reset/reset.module.css';
+	import clsx from 'clsx';
+
+	/**
 	 * Specify the kind of button
 	 * @type {"primary" | "secondary" | "success" | "error" | "warning" | "alert" | "violet"}
 	 */
@@ -16,9 +17,9 @@
 
 	/**
 	 * Specify the variant of button
-	 * @type { "shadow" | "ghost" | "unstyled"}
+	 * @type {"" | "shadow" | "ghost" | "unstyled"}
 	 */
-	export let variant = 'ghost';
+	export let variant = '';
 
 	/**
 	 * Specify the shape of button
@@ -26,23 +27,34 @@
 	 */
 	export let shape = 'square';
 
-  /**
+	/**
 	 * Specify the alignment of button
 	 * @type { "start" | "grow"}
 	 */
-	export let align = 'start';
+	export let align = 'grow';
 
 	export let isDisabled = false;
 
+	let svgOnly = false;
 
-  let svgOnly = false;
 	let isFocused = false;
 	let isPressed = false;
 	let isHovered = false;
-  /**
+	/**
 	 * @type {null}
 	 */
-  let suffix = null;
+	let suffix = null;
+
+	function setFocus() {
+		if (isPressed == false) {
+			isFocused = true;
+		}
+	}
+
+	function leaveClick() {
+		isPressed = false;
+		isFocused = false;
+	}
 
 	// export type ButtonAlign = 'start' | 'grow';
 	// export type ButtonShape = 'square' | 'circle';
@@ -51,24 +63,52 @@
 <button
 	{...$$restProps}
 	type="submit"
-	data-geist-button=""
+	on:mouseenter={() => (isHovered = true)}
+	on:mouseleave={() => (isHovered = false)}
+	on:focus={setFocus}
+	on:blur={() => (isFocused = false)}
+	on:mousedown={() => (isPressed = true)}
+	on:mouseup={leaveClick}
+	on:click
+	on:mouseover
+	on:mouseenter
+	on:mouseleave
+	on:focus
 	data-focus={isFocused ? '' : null}
 	data-active={isPressed ? '' : null}
 	data-hover={isHovered ? '' : null}
-	class={`${reset.reset} ${styles.base} ${variant == "unstyled" ? styles.button : ''}`}
+	class={clsx([
+		reset.reset,
+		styles.base,
+		{ [styles.button]: variant !== 'unstyled' },
+		!variant && styles.invert,
+		{
+			[styles.ghost]: variant === 'ghost',
+			[styles.shadow]: variant === 'shadow'
+		},
+		{
+			[styles.shape]: !!shape,
+			[styles.circle]: shape === 'circle'
+		},
+		{
+			[styles.secondary]: kind === 'secondary',
+			[styles[size]]: !!size,
+			[styles.disabled]: isDisabled
+		},
+		kind === 'success' && ['geist-themed', 'geist-success', 'geist-success-fill'],
+		kind === 'error' && ['geist-themed', 'geist-error', 'geist-error-fill'],
+		kind === 'warning' && ['geist-themed', 'geist-warning', 'geist-warning-fill'],
+		kind === 'alert' && ['geist-themed', 'geist-alert', 'geist-alert-fill'],
+		kind === 'violet' && ['geist-themed', 'geist-violet', 'geist-violet-fill']
+	])}
 >
-	<slot></slot>
-</button>
-
-
-<!-- <span
-		class={`${styles.content} ${align === 'grow' && styles.grow} ${
-			align === 'start' && styles.start
-		} ${svgOnly && styles.flex}`}
+	<span
+		class={clsx(styles.content, {
+			[styles.grow]: align === 'grow',
+			[styles.start]: align === 'start',
+			[styles.flex]: svgOnly
+		})}
 	>
 		<slot />
 	</span>
-
-	{#if suffix}
-		<span class={styles.suffix}>{suffix}</span>
-	{/if} -->
+</button>

@@ -114,7 +114,8 @@
   box-shadow: none;
   background: transparent;
   color: var(--themed-bg);
-  --themed-border: var(--themed-bg);
+  /* --themed-border: var(--themed-bg); */
+  border: 1px solid var(--themed-border, var(--geist-foreground));
 }
 
 .invert[data-active] {
