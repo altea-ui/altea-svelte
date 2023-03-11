@@ -18,7 +18,7 @@
 	 * Specify the variant of button
 	 * @type { "shadow" | "ghost" | "unstyled"}
 	 */
-	export let variant = 'unstyled';
+	export let variant = 'ghost';
 
 	/**
 	 * Specify the shape of button
@@ -43,7 +43,8 @@
 	 * @type {null}
 	 */
   let suffix = null;
-	//  export type ButtonAlign = 'start' | 'grow';
+
+	// export type ButtonAlign = 'start' | 'grow';
 	// export type ButtonShape = 'square' | 'circle';
 </script>
 
@@ -54,9 +55,9 @@
 	data-focus={isFocused ? '' : null}
 	data-active={isPressed ? '' : null}
 	data-hover={isHovered ? '' : null}
-	
+	class={`${reset.reset} ${styles.base} ${variant == "unstyled" ? styles.button : ''}`}
 >
-	
+	<slot></slot>
 </button>
 
 
