@@ -114,7 +114,7 @@
   box-shadow: none;
   background: transparent;
   color: var(--themed-bg);
-  /* --themed-border: var(--themed-bg); */
+  /* --themed-border: var(--themed-bg); For some reason it doesn't work. */
   border: 1px solid var(--themed-border, var(--geist-foreground));
 }
 
@@ -176,7 +176,8 @@
 .secondary {
   --themed-bg: var(--geist-background);
   --themed-fg: var(--geist-secondary);
-  --themed-border: var(--accents-2);
+  /* --themed-border: var(--accents-2); Same problem here */
+  border: 1px solid var(--accents-2) !important;
 }
 
 .secondary.invert[data-hover] {
