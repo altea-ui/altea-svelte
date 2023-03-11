@@ -23,9 +23,9 @@
 
 	/**
 	 * Specify the shape of button
-	 * @type { "square" | "circle"}
+	 * @type { "default" | "square" | "circle"}
 	 */
-	export let shape = 'square';
+	export let shape = 'default';
 
 	/**
 	 * Specify the alignment of button
@@ -87,7 +87,7 @@
 			[styles.shadow]: variant === 'shadow'
 		},
 		{
-			[styles.shape]: !!shape,
+			[styles.shape]: shape === 'square',
 			[styles.circle]: shape === 'circle'
 		},
 		{

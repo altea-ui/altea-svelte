@@ -12,5 +12,5 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <br/>
 <Button style="margin: 20px;" kind="secondary" variant="ghost" size="large" on:click={handleClick}>Upload</Button>
-<Button style="margin: 20px;" kind="primary" variant="shadow" size="large" on:click={handleClick}>Upload</Button>
-<Button style="margin: 20px;" kind="primary" variant="default" size="large" on:click={handleClick}>Upload</Button>
+<Button style="margin: 20px; width: 200px;" kind="primary" shape="default" variant="shadow" size="large" on:click={handleClick}>Upload</Button>
+<Button style="margin: 20px;" kind="secondary" variant="default" size="large" on:click={handleClick}>Upload</Button>
