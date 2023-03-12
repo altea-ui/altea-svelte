@@ -183,7 +183,7 @@
 .secondary.invert[data-hover] {
   background: var(--geist-background);
   color: var(--geist-foreground);
-  border-color: var(--geist-foreground);
+  border-color: var(--geist-foreground) !important; /* fixed border not showing up */
 }
 
 .secondary.invert[data-active] {

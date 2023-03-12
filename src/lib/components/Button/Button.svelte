@@ -17,9 +17,9 @@
 
 	/**
 	 * Specify the variant of button
-	 * @type {"default" | "shadow" | "ghost" | "unstyled"}
+	 * @type {"" | "shadow" | "ghost" | "unstyled"}
 	 */
-	export let variant = 'default';
+	export let variant = '';
 
 	/**
 	 * Specify the shape of button
