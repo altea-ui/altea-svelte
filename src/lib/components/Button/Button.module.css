@@ -9,6 +9,7 @@
 }
 
 .button {
+  min-width: calc(10.5 * 16px); /* added custom min-width from geist-ui*/
   border-radius: var(--geist-radius);
   color: var(--themed-fg, var(--geist-background));
   background: var(--themed-bg, var(--geist-foreground));

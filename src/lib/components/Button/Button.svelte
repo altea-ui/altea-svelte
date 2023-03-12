@@ -33,17 +33,28 @@
 	 */
 	export let align = 'grow';
 
+	/**
+	 * Prefix any component (for example icons) to the button
+	 * @type {any}
+	 */
+	export let prefix = null;
+
+	/**
+	 * Set the button in a disabled state
+	 */
 	export let isDisabled = false;
 
-	let svgOnly = false;
+	/**
+	 * Suffix any component (for example icons) to the button
+	 * @type {any}
+	 */
+	export let suffix = null;
+
+	let svgOnly = true;
 
 	let isFocused = false;
 	let isPressed = false;
 	let isHovered = false;
-	/**
-	 * @type {null}
-	 */
-	let suffix = null;
 
 	function setFocus() {
 		if (isPressed == false) {
@@ -102,6 +113,11 @@
 		kind === 'violet' && ['geist-themed', 'geist-violet', 'geist-violet-fill']
 	])}
 >
+	{#if prefix}
+		<span class={styles.prefix}>
+			<svelte:component this={prefix} />
+		</span>
+	{/if}
 	<span
 		class={clsx(styles.content, {
 			[styles.grow]: align === 'grow',
@@ -111,4 +127,9 @@
 	>
 		<slot />
 	</span>
+	{#if suffix}
+		<span class={styles.suffix}>
+			<svelte:component this={suffix} />
+		</span>
+	{/if}
 </button>
