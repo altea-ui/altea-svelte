@@ -1,7 +1,8 @@
 // Reexport your entry components here
 import Button from './components/Button/Button.svelte';
 import Card from './components/Card/Card.svelte';
-import './styles/globals.css';
 
-// import * as Style from './components/Style.css';
-export { Button, Card };
+import * as Style from './styles/globals.css';
+// import './styles/globals.css';
+
+export { Button, Card, Style };
