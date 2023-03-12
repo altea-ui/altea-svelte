@@ -41,4 +41,5 @@
 	<Card accent hoverable>Hoverable and Accent</Card>
 	<br />
 	<Card shadow>Shadow</Card>
+	<p><strong>TODO</strong>: Add colors, footers, content frame and more.</p>
 </div>
