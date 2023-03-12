@@ -1,0 +1,34 @@
+.card {
+    background: var(--geist-background);
+    transition: all 0.2s ease;
+    border-radius: var(--geist-radius);
+    box-shadow: var(--shadow-none);
+    box-sizing: border-box;
+    color: var(--accents-5);
+    background-color: var(--accents-1);
+    border: 1px solid var(--accents-2);
+    width: var(--geist-card-width-auto);
+    height: var(--geist-card-height-auto);
+    padding: var(--geist-card-padding-tb) var(--geist-card-padding-rl);
+    margin: var(--geist-card-margin-tb) var(--geist-card-margin-rl);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .image {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    padding: calc(1 * 16px) calc(1 * 16px) calc(1 * 16px) calc(1 * 16px);
+    margin: 0 0 0 0;
+}

@@ -12,6 +12,7 @@
 	<p>A Work in progress Svelte based ui library.</p>
 	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation.</p>
 	<br />
+	<h2>Button</h2>
 	<Button
 		kind="primary"
 		shape="default"
@@ -33,6 +34,8 @@
 		size="large"
 		on:click={handleClick}>Button</Button
 	>
-	<Card></Card>
 	<p><strong>TODO</strong>: Add spinner to <a href="#button">Button</a></p>
+	<br />
+	<h2>Card</h2>
+	<Card>Hello</Card>
 </div>
