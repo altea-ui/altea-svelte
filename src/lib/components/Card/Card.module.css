@@ -5,7 +5,6 @@
     box-shadow: var(--shadow-none);
     box-sizing: border-box;
     color: var(--accents-5);
-    background-color: var(--accents-1);
     border: 1px solid var(--accents-2);
     width: var(--geist-card-width-auto);
     height: var(--geist-card-height-auto);
@@ -13,8 +12,16 @@
     margin: var(--geist-card-margin-tb) var(--geist-card-margin-rl);
 }
 
-.card:hover {
+.hoverable:hover {
     box-shadow: var(--shadow-medium);
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.shadow:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
@@ -24,6 +31,10 @@
 .card .image {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.accent {
+    background: var(--accents-1) !important;
 }
 
 .content {

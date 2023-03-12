@@ -35,7 +35,10 @@
 		on:click={handleClick}>Button</Button
 	>
 	<p><strong>TODO</strong>: Add spinner to <a href="#button">Button</a></p>
-	<br />
 	<h2>Card</h2>
 	<Card>Hello</Card>
+	<br />
+	<Card accent hoverable>Hoverable and Accent</Card>
+	<br />
+	<Card shadow>Shadow</Card>
 </div>
