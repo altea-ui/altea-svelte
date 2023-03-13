@@ -3,7 +3,7 @@
 	import { Button, Card } from '$lib/index.js';
 
 	function handleClick() {
-		alert('Button Clicked');
+		console.log('Button Clicked');
 	}
 </script>
 
