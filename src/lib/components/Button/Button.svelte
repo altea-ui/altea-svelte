@@ -11,9 +11,9 @@
 
 	/**
 	 * Specify the size of button
-	 * @type { "large" | "small"}
+	 * @type {  "" | "large" | "small"}
 	 */
-	export let size = 'small';
+	export let size = '';
 
 	/**
 	 * Specify the variant of button
