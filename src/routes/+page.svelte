@@ -1,7 +1,7 @@
 <script>
 	import '$lib/styles/globals.css';
 	import { Button, Card } from '$lib/index.js';
-
+	import { DownloadIcon } from 'svelte-feather-icons'
 	function handleClick() {
 		console.log('Button Clicked');
 	}
@@ -25,6 +25,7 @@
 		kind="secondary"
 		variant=""
 		size="large"
+		prefix={DownloadIcon}
 		on:click={handleClick}>Button</Button
 		>
 	<br/>

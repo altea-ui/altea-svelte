@@ -29,9 +29,9 @@
 
 	/**
 	 * Specify the alignment of button
-	 * @type { "start" | "grow"}
+	 * @type { "" | "start" | "grow"}
 	 */
-	export let align = 'grow';
+	export let align = '';
 
 	/**
 	 * Prefix any component (for example icons) to the button
@@ -88,6 +88,7 @@
 	data-focus={isFocused ? '' : null}
 	data-active={isPressed ? '' : null}
 	data-hover={isHovered ? '' : null}
+	disabled={isDisabled ? true : false}
 	class={clsx([
 		reset.reset,
 		styles.base,
@@ -115,7 +116,7 @@
 >
 	{#if prefix}
 		<span class={styles.prefix}>
-			<svelte:component this={prefix} />
+			<svelte:component this={prefix} size="20"/>
 		</span>
 	{/if}
 	<span
@@ -129,7 +130,7 @@
 	</span>
 	{#if suffix}
 		<span class={styles.suffix}>
-			<svelte:component this={suffix} />
+			<svelte:component this={suffix} size="20"/>
 		</span>
 	{/if}
 </button>
