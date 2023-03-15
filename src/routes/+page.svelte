@@ -1,7 +1,7 @@
 <script>
 	import '$lib/styles/globals.css';
 	import { Button, Card } from '$lib/index.js';
-	import { DownloadIcon } from 'svelte-feather-icons'
+	import { DownloadIcon, ArrowDownIcon } from 'svelte-feather-icons'
 	function handleClick() {
 		console.log('Button Clicked');
 	}
@@ -22,18 +22,39 @@
 	>
 	<br/>
 	<Button
+		kind="primary"
+		shape="default"
+		size="large"
+		prefix={ArrowDownIcon}
+		on:click={handleClick}>Button</Button
+	>
+	<br/>
+	<Button
 		kind="secondary"
 		variant=""
 		size="large"
-		prefix={DownloadIcon}
-		on:click={handleClick}>Button</Button
+		suffix={DownloadIcon}
+		on:click={handleClick}>Download</Button
 		>
 	<br/>
 	<Button
 		kind="violet"
 		variant=""
 		size="large"
-		on:click={handleClick}>Button</Button
+		on:click={handleClick}>Large</Button
+	>
+	<br/>
+	<Button
+		kind="success"
+		variant=""
+		on:click={handleClick}>Default</Button
+	>
+	<br/>
+	<Button
+		kind="alert"
+		size="small"
+		variant=""
+		on:click={handleClick}>small</Button
 	>
 	<p><strong>TODO</strong>: Add spinner to <a href="#button">Button</a></p>
 	<h2>Card</h2>
