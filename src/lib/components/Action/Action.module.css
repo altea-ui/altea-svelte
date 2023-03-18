@@ -1,0 +1,72 @@
+.card {
+    background: var(--geist-background);
+    transition: all 0.2s ease;
+    border-radius: var(--geist-radius);
+    box-shadow: var(--shadow-none);
+    box-sizing: border-box;
+    color: var(--accents-5);
+    border: 1px solid var(--accents-2);
+    width: 350px;
+    height: 50px;
+    padding: var(--geist-card-padding-tb) var(--geist-card-padding-rl);
+    margin: var(--geist-card-margin-tb) var(--geist-card-margin-rl);
+}
+
+.hoverable:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.shadow:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .image {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.accent {
+    background: var(--accents-1) !important;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* divide the container into two columns */
+    grid-gap: 0.5rem;
+    height: 100%;
+    /* add some spacing between the columns */
+}
+
+.griditem {
+    /* center the content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper {
+    height: 100% !important;
+}
+
+.elipse {
+    border-radius: 0 var(--geist-radius) 0 var(--geist-radius);
+}
+
+.right {
+    border-radius: 0 var(--geist-radius) var(--geist-radius) 0;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    padding: calc(1 * 16px) calc(1 * 16px) calc(1 * 16px) calc(1 * 16px);
+    margin: 0 0 0 0;
+}

@@ -1,6 +1,6 @@
 <script>
 	import '$lib/styles/globals.css';
-	import { Button, Card } from '$lib/index.js';
+	import { Button, Card, Action } from '$lib/index.js';
 	import { DownloadIcon, ArrowDownIcon } from 'svelte-feather-icons'
 	function handleClick() {
 		console.log('Button Clicked');
@@ -64,4 +64,6 @@
 	<br />
 	<Card shadow>Shadow</Card>
 	<p><strong>TODO</strong>: Add colors, footers, content frame and more.</p>
+	<h2>Action</h2>
+	<Action shadow header="hello">Get Started</Action>
 </div>
