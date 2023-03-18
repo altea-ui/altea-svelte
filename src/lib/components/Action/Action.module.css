@@ -41,7 +41,6 @@
     display: grid;
     grid-template-columns: 1fr auto;
     /* divide the container into two columns */
-    grid-gap: 0.5rem;
     height: 100%;
     /* add some spacing between the columns */
 }

@@ -18,7 +18,7 @@
 	])}
 >
 	<div class={clsx([styles.griditem, styles.content])} style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <h2 style="font-weight: bold;">{header}</h2>
+        <h2 style="font-weight: bold; margin:-4px; font-size: 20px; color: var(--geist-foreground);">{header}</h2>
 	</div>
 	<div class={clsx([styles.griditem])}>
 		<Button style="height: 100% !important; border-radius: 0 var(--geist-radius) var(--geist-radius) 0;" kind="success" shape="square"><slot/></Button>

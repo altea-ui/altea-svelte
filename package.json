@@ -48,6 +48,7 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"clsx": "^1.2.1"
+		"clsx": "^1.2.1",
+		"inter-ui": "^3.19.3"
 	}
 }

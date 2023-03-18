@@ -2,6 +2,7 @@
 	import '$lib/styles/globals.css';
 	import { Button, Card, Action } from '$lib/index.js';
 	import { DownloadIcon, ArrowDownIcon } from 'svelte-feather-icons'
+	import "inter-ui/inter.css";
 	function handleClick() {
 		console.log('Button Clicked');
 	}
@@ -65,5 +66,5 @@
 	<Card shadow>Shadow</Card>
 	<p><strong>TODO</strong>: Add colors, footers, content frame and more.</p>
 	<h2>Action</h2>
-	<Action shadow header="hello">Get Started</Action>
+	<Action shadow accent header="A VST system to scale.">Get Started</Action>
 </div>
