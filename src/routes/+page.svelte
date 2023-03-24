@@ -1,8 +1,9 @@
 <script>
 	import '$lib/styles/globals.css';
+	import "inter-ui/inter.css"; // for inter font
 	import { Button, Card, Action } from '$lib/index.js';
 	import { DownloadIcon, ArrowDownIcon } from 'svelte-feather-icons'
-	import "inter-ui/inter.css";
+
 	function handleClick() {
 		console.log('Button Clicked');
 	}
@@ -12,7 +13,6 @@
 	<h1>Welcome Altea</h1>
 	<p>A Work in progress Svelte based ui library.</p>
 	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation.</p>
-	<br />
 	<h2>Button</h2>
 	<Button
 		kind="primary"
@@ -66,5 +66,9 @@
 	<Card shadow>Shadow</Card>
 	<p><strong>TODO</strong>: Add colors, footers, content frame and more.</p>
 	<h2>Action</h2>
-	<Action shadow accent header="A VST system to scale.">Get Started</Action>
+	<Action header="The Action component" hoverable>Get Started</Action>
+	<br/>
+	<Action header="Header Text" shadow>Shadow Enabled</Action>
+	<br/>
+	<Action header="Accented Header Text" accent>Accented</Action>
 </div>
