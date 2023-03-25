@@ -1,6 +1,6 @@
 {
 	"name": "altea",
-	"version": "0.1.14",
+	"version": "0.1.15",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
