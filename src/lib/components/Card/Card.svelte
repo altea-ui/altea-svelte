@@ -8,6 +8,7 @@
 </script>
 
 <div
+	{...$$restProps}
 	class={clsx([
 		styles.card,
 		{ [styles.accent]: accent },
