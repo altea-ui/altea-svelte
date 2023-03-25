@@ -1,6 +1,6 @@
 {
 	"name": "altea",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
@@ -17,7 +17,11 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
-		}
+		},
+		"./styles/globals.css": "./dist/styles/globals.css",
+		"./styles/geist-text.css": "./dist/styles/geist-text.css",
+		"./styles/geist-globals.css": "./dist/styles/geist-globals.css",
+		"./styles/geist-container.css": "./dist/styles/geist-container.css"
 	},
 	"files": [
 		"dist"
