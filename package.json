@@ -1,8 +1,8 @@
 {
 	"name": "altea",
-	"version": "0.1.10",
+	"version": "0.1.11",
 	"license": "MIT",
-	"main": "dist/index.js",
+	"main": "./dist/index.js",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
