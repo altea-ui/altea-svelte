@@ -1,6 +1,6 @@
 {
 	"name": "altea",
-	"version": "0.1.7",
+	"version": "0.1.9",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
@@ -16,7 +16,8 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
+			"svelte": "./dist/index.js",
+			"import": "./dist/index.js"
 		},
 		"./globals.css": "./dist/styles/globals.css"
 	},
