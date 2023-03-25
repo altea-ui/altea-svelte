@@ -1,6 +1,6 @@
 {
 	"name": "altea",
-	"version": "0.1.5",
+	"version": "0.1.7",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
@@ -18,10 +18,7 @@
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
 		},
-		"./styles/globals.css": "./dist/styles/globals.css",
-		"./styles/geist-text.css": "./dist/styles/geist-text.css",
-		"./styles/geist-globals.css": "./dist/styles/geist-globals.css",
-		"./styles/geist-container.css": "./dist/styles/geist-container.css"
+		"./globals.css": "./dist/styles/globals.css"
 	},
 	"files": [
 		"dist"
@@ -43,7 +40,6 @@
 		"publint": "^0.1.9",
 		"svelte": "^3.57.0",
 		"svelte-check": "^3.0.1",
-		"svelte-feather-icons": "^4.0.0",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0"
@@ -53,6 +49,7 @@
 	"type": "module",
 	"dependencies": {
 		"clsx": "^1.2.1",
-		"inter-ui": "^3.19.3"
+		"inter-ui": "^3.19.3",
+		"svelte-feather-icons": "^4.0.0"
 	}
 }
