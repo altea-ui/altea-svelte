@@ -1,15 +1,31 @@
 # Altea
 
 To install Altea (soon available) use the following command:
-```bash
+```sh
 npm i altea
 ```
-```bash
+```sh
 yarn install altea
 ```
 
+Get started with Altea by importing the stylesheet.
+```javascript
+import "altea/globals.css";
+```
+Define the theme in the app.html file (or any other place)
+```html
+<html class="light-theme"> <!--style="color-scheme: light;" is optional-->
+...
+```
 
+Now you can start using components!
+```html
+<script>
+	import { Button } from "altea";
+</script>
 
+<Button variant="shadow">Hello World</Button>
+```
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
