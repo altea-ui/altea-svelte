@@ -1,7 +1,7 @@
 <script>
 	import '$lib/styles/globals.css';
 	import "inter-ui/inter.css"; // for inter font
-	import { Button, Card, Action } from '$lib/index.js';
+	import { Button, Card, Action, FileTree, Folder, File } from '$lib/index.js';
 	import { DownloadIcon, ArrowDownIcon } from 'svelte-feather-icons'
 
 	function handleClick() {
@@ -71,4 +71,15 @@
 	<Action header="Header Text" shadow>Shadow Enabled</Action>
 	<br/>
 	<Action header="Accented Header Text" accent>Accented</Action>
+	<h2>FileTree</h2>
+	<FileTree>
+		<Folder name="test">
+			<File name="test2"/>
+			<File name="test2"/>
+
+			<File name="test2"/>
+
+			<File name="test2"/>
+		</Folder>
+	</FileTree>
 </div>
