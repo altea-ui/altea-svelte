@@ -27,7 +27,7 @@
 
 <li class={clsx(styles.file, { [styles.active]: active })}>
 	<!-- svelte-ignore a11y-missing-attribute -->
-	<a {...$$restProps}>
+	<a>
 		{#each Array(depthTest) as _, i}
 			<span key={i} data-tree-indent="" />
 		{/each}
@@ -52,6 +52,6 @@
 				>
 			{/if}
 		</span>
-		<span class={styles.name}>{name}</span>
+		<span class={styles.name} {...$$restProps}>{name}</span>
 	</a>
 </li>

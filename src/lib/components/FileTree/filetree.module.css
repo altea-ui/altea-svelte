@@ -80,7 +80,7 @@
 }
 
 .status {
-    background: var(--geist-background);
+    /* background: var(--geist-background); */ /*unset background for docs reasons*/
     margin-left: -24px;
     margin-right: 14px;
     vertical-align: middle;
