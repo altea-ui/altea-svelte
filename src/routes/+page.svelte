@@ -73,13 +73,25 @@
 	<Action header="Accented Header Text" accent>Accented</Action>
 	<h2>FileTree</h2>
 	<FileTree>
-		<Folder name="test">
-			<File name="test2"/>
-			<File name="test2"/>
-
-			<File name="test2"/>
-
-			<File name="test2"/>
+		<Folder name="folder 1" depthTest={0}>
+			<File name="file 1" depthTest={1}/>
 		</Folder>
+		<File name="file 2" depthTest={0}/>
+		<File name="file 3" depthTest={0}/>
+		<Folder name="folder 2" depthTest={0}>
+			<Folder name="folder 4" depthTest={1}>
+				<File name="file 5" depthTest={2}/>
+			</Folder>
+			<File name="file 4" depthTest={1}/>
+		</Folder>
+		<File name="file 6" depthTest={0}/>
 	</FileTree>
 </div>
+
+
+<!-- <style>
+	.altea-content {
+		padding: 2rem;
+		will-change: margin-left;
+	}
+</style> -->
