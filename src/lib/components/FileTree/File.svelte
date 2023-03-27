@@ -23,11 +23,17 @@
 	 * @type {number}
 	 */
 	export let depthTest = 0;
+
+	
+	/**
+	 * @type {string | undefined}
+	 */
+	 export let href = undefined;
 </script>
 
 <li class={clsx(styles.file, { [styles.active]: active })}>
 	<!-- svelte-ignore a11y-missing-attribute -->
-	<a>
+	<a href={href}>
 		{#each Array(depthTest) as _, i}
 			<span key={i} data-tree-indent="" />
 		{/each}
