@@ -1,5 +1,5 @@
 # Altea
-
+## [Visit docs here](https://altea.az.software/)
 To install Altea (soon available) use the following command:
 ```sh
 npm i altea
